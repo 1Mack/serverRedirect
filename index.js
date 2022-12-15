@@ -12,11 +12,12 @@ app.get('/servers/:id', (request, response) => {
   if (!server) return response.status(404).json('Server not found')
 
   //if (new Date().getTime() - serversJSON.lastSync <= '60000') return response.json(server)
+  
   return response.json(server.redirectTo) 
 })
 app.get('/servers', async (request, response) => {
 
-  //if (new Date().getTime() - serversJSON.lastSync <= '60000') return response.json(serversJSON.servers)
+  if (new Date().getTime() - serversJSON.lastSync <= '60000') return response.json(serversJSON.servers)
 
   let servers = []
 
@@ -55,7 +56,6 @@ app.get('/servers', async (request, response) => {
       })
       .catch((err) => { console.log(err) })
   }
-  //response.json(servers)
   servers = servers.map(sv => {
     if (sv.serversInfos.length <= 1) return sv;
 
@@ -69,13 +69,6 @@ app.get('/servers', async (request, response) => {
       return (Math.abs(curr - 0.5) < Math.abs(prev - 0.5) ? curr : prev);
     })
     getServers = sv.serversInfos[newSv.findIndex(m => m === getServers)].ip
-
-    console.log(getServers)
-    /* let getServers = sv.serversInfos.reduce((acc, cur) => {
-      if (cur.players === cur.playersTotal || (cur.players === 0 && acc.players > 0) || (acc.players > cur.players && acc.players < 9)) {
-        return acc
-      } else return cur
-    }) */
     getServers ? sv.redirectTo = getServers : sv.redirectTo = sv.serversInfos[0].ip
     return sv
   })
