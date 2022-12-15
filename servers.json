@@ -1,0 +1,166 @@
+{
+  "lastSync": 1671122830838,
+  "servers": [
+    {
+      "name": "jailbreak",
+      "redirectTo": "",
+      "serversInfos": [
+        {
+          "name": "[BR] Savage #1 ➔ JailBreak | FACAS | SKINS | LUVAS | 128T",
+          "map": "jb_clouds_final5_fix_savage",
+          "ip": "131.196.196.197:27170",
+          "players": 20,
+          "playersTotal": 24
+        }
+      ]
+    },
+    {
+      "name": "awp",
+      "redirectTo": "",
+      "serversInfos": [
+        {
+          "name": "[BR] Savage #3 ➔ AWP ONLY | FACAS | SKINS | LUVAS | 128T",
+          "map": "awp_tomodachi_savage1",
+          "ip": "131.196.196.197:27090",
+          "players": 14,
+          "playersTotal": 18
+        }
+      ]
+    },
+    {
+      "name": "retake",
+      "redirectTo": "131.196.196.197:27450",
+      "serversInfos": [
+        {
+          "name": "[BR] Savage #4 ➔ RETAKE | FACAS | SKINS | LUVAS | 128T",
+          "map": "de_cbble",
+          "ip": "131.196.196.197:27130",
+          "players": 10,
+          "playersTotal": 13
+        },
+        {
+          "name": "[BR] Savage #5 ➔ Retake Pistol | FACAS | SKINS | LUVAS | 128T",
+          "map": "de_dust2",
+          "ip": "131.196.196.197:27150",
+          "players": 7,
+          "playersTotal": 12
+        },
+        {
+          "name": "[BR] Savage #8 ➔ RETAKE | FACAS | SKINS | LUVAS | 128T",
+          "map": "de_cbble",
+          "ip": "131.196.196.197:27270",
+          "players": 8,
+          "playersTotal": 12
+        },
+        {
+          "name": "[BR] Savage #9 ➔  RETAKE | FACAS | SKINS | LUVAS | 128T",
+          "map": "de_overpass",
+          "ip": "131.196.196.197:27330",
+          "players": 8,
+          "playersTotal": 12
+        },
+        {
+          "name": "[BR] Savage #10 ➔ RETAKE | FACAS | SKINS | LUVAS | 128T",
+          "map": "de_dust2",
+          "ip": "131.196.196.197:27350",
+          "players": 11,
+          "playersTotal": 12
+        },
+        {
+          "name": "[BR] Savage #16 ➔ RETAKE PRO | FACAS | SKINS | LUVAS | 128T",
+          "map": "de_dust2",
+          "ip": "131.196.196.197:27450",
+          "players": 5,
+          "playersTotal": 11
+        },
+        {
+          "name": "[BR] Savage #18 ➔ RETAKE | FACAS | SKINS | LUVAS | 128T",
+          "map": "de_inferno",
+          "ip": "131.196.196.196:27120",
+          "players": 0,
+          "playersTotal": 13
+        }
+      ]
+    },
+    {
+      "name": "mix",
+      "redirectTo": "131.196.196.197:27190",
+      "serversInfos": [
+        {
+          "name": "[BR] Savage #6 ➔ MIX 4FUN | FACAS | SKINS | LUVAS | 128T",
+          "map": "de_train",
+          "ip": "131.196.196.197:27190",
+          "players": 7,
+          "playersTotal": 10
+        },
+        {
+          "name": "[BR] Savage #11 ➔ MIX 4FUN | FACAS | SKINS | LUVAS | 128T",
+          "map": "de_mirage",
+          "ip": "131.196.196.197:27280",
+          "players": 10,
+          "playersTotal": 10
+        },
+        {
+          "name": "[BR] Savage #17 ➔ MIX 4FUN | FACAS | SKINS | LUVAS | 128T",
+          "map": "de_mirage",
+          "ip": "131.196.196.196:27110",
+          "players": 0,
+          "playersTotal": 10
+        }
+      ]
+    },
+    {
+      "name": "arena",
+      "redirectTo": "",
+      "serversInfos": [
+        {
+          "name": "[BR] Savage #7 ➔ ARENA 1V1 | FACAS | SKINS | LUVAS | 128T",
+          "map": "am_dd2_short_dolnma_savage",
+          "ip": "131.196.196.197:27260",
+          "players": 8,
+          "playersTotal": 20
+        }
+      ]
+    },
+    {
+      "name": "surf",
+      "redirectTo": "",
+      "serversInfos": [
+        {
+          "name": "[BR] Savage #12 ➔ SURF COMBAT | FACAS | SKINS | LUVAS | 128T",
+          "map": "surf_4fun_kg_savage",
+          "ip": "131.196.196.197:27050",
+          "players": 0,
+          "playersTotal": 12
+        }
+      ]
+    },
+    {
+      "name": "dm",
+      "redirectTo": "131.196.196.197:27400",
+      "serversInfos": [
+        {
+          "name": "[BR] Savage #13 ➔ DM FFA MIRAGE | FACAS | SKINS | 128T",
+          "map": "de_mirage",
+          "ip": "131.196.196.197:27310",
+          "players": 16,
+          "playersTotal": 16
+        },
+        {
+          "name": "[BR] Savage #14 ➔ DM FFA PISTOL | FACAS | SKINS | 128T",
+          "map": "de_mirage",
+          "ip": "131.196.196.197:27400",
+          "players": 6,
+          "playersTotal": 16
+        },
+        {
+          "name": "[BR] Savage #15 ➔ DM FFA M4/AK | FACAS | SKINS | 128T",
+          "map": "de_mirage",
+          "ip": "131.196.196.197:27440",
+          "players": 0,
+          "playersTotal": 16
+        }
+      ]
+    }
+  ]
+}
