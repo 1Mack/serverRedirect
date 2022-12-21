@@ -75,8 +75,8 @@ app.get('/servers', async (request, response) => {
   serversJSON.lastSync = new Date().getTime()
   serversJSON.servers = servers
 
-  response.json(serversJSON)
+  response.json(serversJSON.servers)
   return writeFileSync('./servers.json', JSON.stringify(serversJSON))
 })
 
-app.listen(22500, () => console.log('Servidor rodando na porta 3333'))
+app.listen(22500, () => console.log('Servidor rodando na porta 22500'))
