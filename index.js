@@ -1,9 +1,13 @@
 const express = require('express')
 const serversJSON = require('./servers.json')
 const { query } = require('gamedig')
-const app = express()
 const { writeFileSync } = require('fs')
 const { hostInfos } = require('./config')
+const cors = require('cors')
+
+
+const app = express()
+app.use(cors())
 
 app.get('/servers/:id', (request, response) => {
 
@@ -11,17 +15,16 @@ app.get('/servers/:id', (request, response) => {
 
   if (!server) return response.status(404).json({ error: 'Server not found' })
 
-  //if (new Date().getTime() - serversJSON.lastSync <= '60000') return response.json(server)
-  return response.json({ redirectTo: server.redirectTo })
+  return response.status(200).json({ redirectTo: server.redirectTo })
 })
 app.get('/servers', async (request, response) => {
 
-  if (new Date().getTime() - serversJSON.lastSync <= '60000') return response.json(serversJSON.servers)
+  if (new Date().getTime() - serversJSON.lastSync <= '60000') return response.status(200).json(serversJSON.servers)
 
   let servers = []
 
   for (let serverPort of hostInfos) {
-    
+
     await query({
       type: 'csgo',
       host: serverPort.host,
@@ -75,7 +78,7 @@ app.get('/servers', async (request, response) => {
   serversJSON.lastSync = new Date().getTime()
   serversJSON.servers = servers
 
-  response.json(serversJSON.servers)
+  response.status(200).json(serversJSON.servers)
   return writeFileSync('./servers.json', JSON.stringify(serversJSON))
 })
 
