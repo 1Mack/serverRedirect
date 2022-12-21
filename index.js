@@ -6,14 +6,13 @@ const { writeFileSync } = require('fs')
 const { hostInfos } = require('./config')
 
 app.get('/servers/:id', (request, response) => {
-  
+
   let server = serversJSON.servers.find(sv => sv.name === request.params.id)
 
-  if (!server) return response.status(404).json('Server not found')
+  if (!server) return response.status(404).json({ error: 'Server not found' })
 
   //if (new Date().getTime() - serversJSON.lastSync <= '60000') return response.json(server)
-  
-  return response.json(server.redirectTo) 
+  return response.json({ redirectTo: server.redirectTo })
 })
 app.get('/servers', async (request, response) => {
 
@@ -22,7 +21,7 @@ app.get('/servers', async (request, response) => {
   let servers = []
 
   for (let serverPort of hostInfos) {
-
+    
     await query({
       type: 'csgo',
       host: serverPort.host,
@@ -35,7 +34,7 @@ app.get('/servers', async (request, response) => {
           findSv.serversInfos.push({
             name: state.name,
             map: state.map,
-            ip: state.connect,
+            ip: serverPort.host.endsWith('197') ? state.connect.replace('131.196.196.197', 'conectar.savageservidores.com') : state.connect.replace('131.196.196.196', 'conectar2.savageservidores.com'),
             players: state.raw.numplayers,
             playersTotal: state.maxplayers
           })
@@ -47,7 +46,7 @@ app.get('/servers', async (request, response) => {
               {
                 name: state.name,
                 map: state.map,
-                ip: state.connect,
+                ip: serverPort.host.endsWith('197') ? state.connect.replace('131.196.196.197', 'conectar.savageservidores.com') : state.connect.replace('131.196.196.196', 'conectar2.savageservidores.com'),
                 players: state.raw.numplayers,
                 playersTotal: state.maxplayers
               }
@@ -80,4 +79,4 @@ app.get('/servers', async (request, response) => {
   return writeFileSync('./servers.json', JSON.stringify(serversJSON))
 })
 
-app.listen(3333, () => console.log('Servidor rodando na porta 3333'))
+app.listen(22500, () => console.log('Servidor rodando na porta 3333'))
