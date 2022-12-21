@@ -82,12 +82,12 @@ const hostInfos = [
   {
     name: 'mix',
     port: '27110',
-    host: '131.196.196.196'
+    host: '172.16.0.30'
   },
   {
     name: 'retake',
     port: '27120',
-    host: '131.196.196.196'
+    host: '172.16.0.30'
   },
 ]
 
