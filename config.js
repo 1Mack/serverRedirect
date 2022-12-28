@@ -1,6 +1,6 @@
 const hostInfos = [
   {
-    name: 'jailbreak',
+    name: 'jb',
     port: '27170',
     host: '131.196.196.197'
   },
