@@ -50,7 +50,7 @@ app.get('/servers', async (request, response) => {
           findSv.serversInfos.push({
             name: state.name,
             map: state.map,
-            ip: serverPort.host.endsWith('197') ? state.connect.replace('131.196.196.197', 'conectar.savageservidores.com') : state.connect.replace('172.16.0.30', 'conectar2.savageservidores.com'),
+            ip: serverPort.host,
             players: state.raw.numplayers,
             playersTotal: state.maxplayers
           })
@@ -62,7 +62,7 @@ app.get('/servers', async (request, response) => {
               {
                 name: state.name,
                 map: state.map,
-                ip: serverPort.host.endsWith('197') ? state.connect.replace('131.196.196.197', 'conectar.savageservidores.com') : state.connect.replace('172.16.0.30', 'conectar2.savageservidores.com'),
+                ip: serverPort.host,
                 players: state.raw.numplayers,
                 playersTotal: state.maxplayers
               }
