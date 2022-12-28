@@ -1,5 +1,5 @@
 {
-  "lastSync": 1672249291359,
+  "lastSync": 1672251642820,
   "servers": [
     {
       "name": "jb",
@@ -7,9 +7,9 @@
       "serversInfos": [
         {
           "name": "[BR] Savage #1 ➔ JailBreak | FACAS | SKINS | LUVAS | 128T",
-          "map": "jb_moti2_final2_myth1",
-          "ip": "conectar.savageservidores.com:27170",
-          "players": 15,
+          "map": "jb_clouds_pg2_savage",
+          "ip": "131.196.196.197:27170",
+          "players": 12,
           "playersTotal": 24
         }
       ]
@@ -21,7 +21,7 @@
         {
           "name": "[BR] Savage #3 ➔ AWP ONLY | FACAS | SKINS | LUVAS | 128T",
           "map": "awp_deluxe_savage",
-          "ip": "conectar.savageservidores.com:27090",
+          "ip": "131.196.196.197:27090",
           "players": 16,
           "playersTotal": 18
         }
@@ -29,82 +29,68 @@
     },
     {
       "name": "retake",
-      "redirectTo": "conectar.savageservidores.com:27450",
+      "redirectTo": "131.196.196.197:27270",
       "serversInfos": [
         {
           "name": "[BR] Savage #4 ➔ RETAKE | FACAS | SKINS | LUVAS | 128T",
-          "map": "de_inferno",
-          "ip": "conectar.savageservidores.com:27130",
-          "players": 11,
+          "map": "de_dust2",
+          "ip": "131.196.196.197:27130",
+          "players": 12,
           "playersTotal": 13
         },
         {
           "name": "[BR] Savage #5 ➔ Retake Pistol | FACAS | SKINS | LUVAS | 128T",
-          "map": "de_mirage",
-          "ip": "conectar.savageservidores.com:27150",
+          "map": "de_cache",
+          "ip": "131.196.196.197:27150",
           "players": 9,
           "playersTotal": 12
         },
         {
           "name": "[BR] Savage #8 ➔ RETAKE | FACAS | SKINS | LUVAS | 128T",
-          "map": "de_cbble",
-          "ip": "conectar.savageservidores.com:27270",
-          "players": 12,
+          "map": "de_overpass",
+          "ip": "131.196.196.197:27270",
+          "players": 8,
           "playersTotal": 12
         },
         {
           "name": "[BR] Savage #9 ➔  RETAKE | FACAS | SKINS | LUVAS | 128T",
-          "map": "de_overpass",
-          "ip": "conectar.savageservidores.com:27330",
-          "players": 11,
+          "map": "de_nuke",
+          "ip": "131.196.196.197:27330",
+          "players": 9,
           "playersTotal": 12
         },
         {
           "name": "[BR] Savage #10 ➔ RETAKE | FACAS | SKINS | LUVAS | 128T",
           "map": "de_overpass",
-          "ip": "conectar.savageservidores.com:27350",
+          "ip": "131.196.196.197:27350",
           "players": 0,
           "playersTotal": 12
         },
         {
           "name": "[BR] Savage #16 ➔ RETAKE PRO | FACAS | SKINS | LUVAS | 128T",
-          "map": "de_inferno",
-          "ip": "conectar.savageservidores.com:27450",
-          "players": 8,
+          "map": "de_nuke",
+          "ip": "131.196.196.197:27450",
+          "players": 10,
           "playersTotal": 11
-        },
-        {
-          "name": "[BR] Savage #18 ➔ RETAKE | FACAS | SKINS | LUVAS | 128T",
-          "map": "de_dust2",
-          "ip": "conectar2.savageservidores.com:27120",
-          "players": 2,
-          "playersTotal": 13
         }
       ]
     },
     {
       "name": "mix",
-      "redirectTo": "conectar.savageservidores.com:27190",
+      "redirectTo": "131.196.196.197:27280",
       "serversInfos": [
         {
           "name": "[BR] Savage #6 ➔ MIX 4FUN | FACAS | SKINS | LUVAS | 128T",
-          "map": "de_mirage",
-          "ip": "conectar.savageservidores.com:27190",
-          "players": 8,
-          "playersTotal": 10
-        },
-        {
-          "name": "[BR] Savage #11 ➔ MIX 4FUN | FACAS | SKINS | LUVAS | 128T",
           "map": "de_dust2",
-          "ip": "conectar.savageservidores.com:27280",
+          "ip": "131.196.196.197:27190",
           "players": 10,
           "playersTotal": 10
         },
         {
-          "name": "[BR] Savage #17 ➔ MIX 4FUN | FACAS | SKINS | LUVAS | 128T",
+          "name": "[BR] Savage #11 ➔ MIX 4FUN | FACAS | SKINS | LUVAS | 128T",
           "map": "de_mirage",
-          "ip": "conectar2.savageservidores.com:27110",
-          "players": 0,
+          "ip": "131.196.196.197:27280",
+          "players": 9,
           "playersTotal": 10
         }
       ]
@@ -115,9 +101,9 @@
       "serversInfos": [
         {
           "name": "[BR] Savage #7 ➔ ARENA 1V1 | FACAS | SKINS | LUVAS | 128T",
-          "map": "am_dd2_short_dolnma_savage",
-          "ip": "conectar.savageservidores.com:27260",
-          "players": 13,
+          "map": "am_multimap3_fix_v2",
+          "ip": "131.196.196.197:27260",
+          "players": 17,
           "playersTotal": 20
         }
       ]
@@ -129,7 +115,7 @@
         {
           "name": "[BR] Savage #12 ➔ SURF COMBAT | FACAS | SKINS | LUVAS | 128T",
           "map": "surf_hang_time_reloaded_nf_sava",
-          "ip": "conectar.savageservidores.com:27050",
+          "ip": "131.196.196.197:27050",
           "players": 0,
           "playersTotal": 12
         }
@@ -137,27 +123,27 @@
     },
     {
       "name": "dm",
-      "redirectTo": "conectar.savageservidores.com:27400",
+      "redirectTo": "131.196.196.197:27400",
       "serversInfos": [
         {
           "name": "[BR] Savage #13 ➔ DM FFA MIRAGE | FACAS | SKINS | 128T",
           "map": "de_mirage",
-          "ip": "conectar.savageservidores.com:27310",
-          "players": 13,
+          "ip": "131.196.196.197:27310",
+          "players": 12,
           "playersTotal": 16
         },
         {
           "name": "[BR] Savage #14 ➔ DM FFA PISTOL | FACAS | SKINS | 128T",
           "map": "de_mirage",
-          "ip": "conectar.savageservidores.com:27400",
-          "players": 5,
+          "ip": "131.196.196.197:27400",
+          "players": 6,
           "playersTotal": 16
         },
         {
           "name": "[BR] Savage #15 ➔ DM FFA M4/AK | FACAS | SKINS | 128T",
           "map": "de_mirage",
-          "ip": "conectar.savageservidores.com:27440",
-          "players": 2,
+          "ip": "131.196.196.197:27440",
+          "players": 0,
           "playersTotal": 16
         }
       ]

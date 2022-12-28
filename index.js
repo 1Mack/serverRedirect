@@ -32,7 +32,13 @@ app.get('/servers/:id', (request, response) => {
 })
 app.get('/servers', async (request, response) => {
 
-  if (new Date().getTime() - serversJSON.lastSync <= '60000') return response.status(200).json(serversJSON.servers)
+  if (new Date().getTime() - serversJSON.lastSync <= '60000') {
+    serversJSON.servers.map(m => m.serversInfos = m.serversInfos.map(sv => {
+      sv.ip.startsWith('172') ? sv.ip = sv.ip.replace('172.16.0.30', 'conectar2.savageservidores.com') : sv.ip = sv.ip.replace('131.196.196.197', 'conectar.savageservidores.com')
+      return sv
+    }))
+    return response.status(200).json(serversJSON.servers)
+  }
 
   let servers = []
 
@@ -69,7 +75,7 @@ app.get('/servers', async (request, response) => {
             ],
           })
       })
-      .catch((err) => { console.log(err) })
+      .catch((err) => { })
   }
   servers = servers.map(sv => {
     if (sv.serversInfos.length <= 1) return sv;
@@ -91,8 +97,22 @@ app.get('/servers', async (request, response) => {
   serversJSON.lastSync = new Date().getTime()
   serversJSON.servers = servers
 
-  response.status(200).json(serversJSON.servers)
-  return writeFileSync('./servers.json', JSON.stringify(serversJSON))
+  writeFileSync('./servers.json', JSON.stringify(serversJSON))
+
+  serversJSON.servers.map(svs => {
+    svs.serversInfos = svs.serversInfos.map(sv => {
+      if (sv.ip.startsWith('172')) {
+        sv.ip = sv.ip.replace('172.16.0.30', 'conectar2.savageservidores.com')
+        return sv
+      } else {
+        sv.ip = sv.ip.replace('131.196.196.197', 'conectar.savageservidores.com')
+        return sv
+      }
+    })
+    return svs
+  })
+
+  return response.status(200).json(serversJSON.servers)
 })
 
 app.listen(22500, () => console.log('Servidor rodando na porta 22500'))
