@@ -50,7 +50,7 @@ app.get('/servers', async (request, response) => {
           findSv.serversInfos.push({
             name: state.name,
             map: state.map,
-            ip: serverPort.host,
+            ip: `${serverPort.host}:${serverPort.port}`,
             players: state.raw.numplayers,
             playersTotal: state.maxplayers
           })
@@ -62,7 +62,7 @@ app.get('/servers', async (request, response) => {
               {
                 name: state.name,
                 map: state.map,
-                ip: serverPort.host,
+                ip: `${serverPort.host}:${serverPort.port}`,
                 players: state.raw.numplayers,
                 playersTotal: state.maxplayers
               }
