@@ -15,7 +15,20 @@ app.get('/servers/:id', (request, response) => {
 
   if (!server) return response.status(404).json({ error: 'Server not found' })
 
-  return response.status(200).json({ redirectTo: server.redirectTo })
+  if (server.redirectTo !== '') return response.status(200).json({ redirectTo: server.redirectTo })
+
+
+  const serversFilter = serversJSON.servers.filter(sv => sv.name !== request.params.id).map((server) => {
+    if (server.redirectTo === '') {
+      if (server.serversInfos[0].players < (server.serversInfos[0].playersTotal - 1))
+        return `${server.serversInfos[0].name.slice(0, server.serversInfos[0].name.indexOf('|')).trimEnd()}/${server.serversInfos[0].ip}`
+    } else {
+      let serverFind = server.serversInfos.find(sv => sv.ip === server.redirectTo)
+      return `${serverFind.name.slice(0, serverFind.name.indexOf('|')).trimEnd()}/${server.redirectTo}`
+    }
+  })
+
+  return response.status(200).json({ redirectTo: '', servers: serversFilter.join('|'), serverCount: serversFilter.length })
 })
 app.get('/servers', async (request, response) => {
 
