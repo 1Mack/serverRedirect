@@ -1,7 +1,6 @@
 const express = require('express')
-const serversJSON = require('./servers.json')
 const { query } = require('gamedig')
-const { writeFileSync } = require('fs')
+const { writeFileSync, readFileSync } = require('fs')
 const { hostInfos } = require('./config')
 const cors = require('cors')
 
@@ -10,6 +9,7 @@ const app = express()
 app.use(cors())
 
 app.get('/servers/:id', (request, response) => {
+  const serversJSON = JSON.parse(readFileSync('./servers.json', { encoding: 'utf8' }))
 
   let server = serversJSON.servers.find(sv => sv.name === request.params.id)
 
@@ -31,6 +31,7 @@ app.get('/servers/:id', (request, response) => {
   return response.status(200).json({ redirectTo: '', servers: serversFilter.join('|'), serverCount: serversFilter.length })
 })
 app.get('/servers', async (request, response) => {
+  const serversJSON = JSON.parse(readFileSync('./servers.json', { encoding: 'utf8' }))
 
   if (new Date().getTime() - serversJSON.lastSync <= '60000') {
     serversJSON.servers.map(m => m.serversInfos = m.serversInfos.map(sv => {
