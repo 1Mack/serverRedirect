@@ -55,7 +55,7 @@ const hostInfos = [
     host: '131.196.196.197'
   },
   {
-    name: 'surf',
+    name: 'retake',
     port: '27050',
     host: '131.196.196.197'
   },
