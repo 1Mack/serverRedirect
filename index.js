@@ -32,7 +32,7 @@ app.get('/servers/:id', (request, response) => {
   }
 
 
-  return response.status(200).json({ redirectTo: '', servers: servers.map(sv => `${sv.name.slice(0, sv.name.indexOf('|')).trimEnd()}/${sv.ip}`).join('|'), serverCount: servers.length })
+  return response.status(200).json({ redirectTo: '', servers: servers.map(sv => `${sv.name.slice(0, sv.name.indexOf('|')).trimEnd()}&${sv.ip}`).join('|'), serverCount: servers.length })
 })
 app.get('/servers', async (request, response) => {
   const serversJSON = JSON.parse(readFileSync('./servers.json', { encoding: 'utf8' }))
