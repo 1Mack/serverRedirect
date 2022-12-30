@@ -17,18 +17,22 @@ app.get('/servers/:id', (request, response) => {
 
   if (server.redirectTo !== '') return response.status(200).json({ redirectTo: server.redirectTo })
 
+  const servers = []
 
-  const serversFilter = serversJSON.servers.filter(sv => sv.name !== request.params.id).map((server) => {
-    if (server.redirectTo === '') {
-      if (server.serversInfos[0].players < (server.serversInfos[0].playersTotal - 1))
-        return `${server.serversInfos[0].name.slice(0, server.serversInfos[0].name.indexOf('|')).trimEnd()}/${server.serversInfos[0].ip}`
+  for (let i in serversJSON.servers) {
+    if (serversJSON.servers[i].name === request.params.id) continue;
+
+    if (serversJSON.servers[i].redirectTo === '') {
+      if (serversJSON.servers[i].serversInfos[0].players < (serversJSON.servers[i].serversInfos[0].playersTotal - 1)) {
+        servers.push(serversJSON.servers[i].serversInfos[0])
+      }
     } else {
-      let serverFind = server.serversInfos.find(sv => sv.ip === server.redirectTo)
-      return `${serverFind.name.slice(0, serverFind.name.indexOf('|')).trimEnd()}/${server.redirectTo}`
+      servers.push(serversJSON.servers[i].serversInfos.find(sv => sv.ip === serversJSON.servers[i].redirectTo))
     }
-  })
+  }
 
-  return response.status(200).json({ redirectTo: '', servers: serversFilter.join('|'), serverCount: serversFilter.length })
+
+  return response.status(200).json({ redirectTo: '', servers: servers.map(sv => `${sv.name.slice(0, sv.name.indexOf('|')).trimEnd()}/${sv.ip}`).join('|'), serverCount: servers.length })
 })
 app.get('/servers', async (request, response) => {
   const serversJSON = JSON.parse(readFileSync('./servers.json', { encoding: 'utf8' }))
