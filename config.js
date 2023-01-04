@@ -89,6 +89,11 @@ const hostInfos = [
     port: '27120',
     host: '172.16.0.30'
   },
+  {
+    name: 'ttt',
+    port: '27390',
+    host: '131.196.196.197'
+  },
 ]
 
 module.exports = {
